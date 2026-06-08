@@ -1,28 +1,89 @@
-## Layout
+* {
+  box-sizing: border-box;
+}
 
-The designs were created to the following widths:
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
 
-- Mobile: 375px
-- Desktop: 1440px
+body {
+  font-family: 'Figtree', system-ui, sans-serif;
+  background: hsl(47, 88%, 63%);
+  color: hsl(0, 0%, 7%);
+}
 
-> 💡 These are just the design sizes. Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens.
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
 
-## Colors
+.card {
+  width: min(100%, 360px);
+  background: white;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.18);
+}
 
-- Yellow: hsl(47, 88%, 63%)
+.card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
-- White: hsl(0, 0%, 100%)
+.card__content {
+  padding: 1.75rem 1.5rem 2rem;
+}
 
-- Gray 500: hsl(0, 0%, 42%)
-- Gray 950: hsl(0, 0%, 7%)
+.card__tag {
+  display: inline-flex;
+  padding: 0.35rem 0.85rem;
+  background: hsl(47, 88%, 63%);
+  border-radius: 999px;
+  color: hsl(0, 0%, 7%);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
 
-## Typography
+.card__date {
+  margin: 0.85rem 0 1rem;
+  color: hsl(0, 0%, 42%);
+  font-size: 0.875rem;
+}
 
-### Body Copy
+.card__title {
+  margin: 0 0 1rem;
+  font-size: 1.9rem;
+  line-height: 1.1;
+  font-weight: 800;
+}
 
-- Font size (paragraph): 16px
+.card__description {
+  margin: 0 0 1.75rem;
+  color: hsl(0, 0%, 42%);
+  line-height: 1.75;
+  font-size: 0.95rem;
+}
 
-### Font
+.card__author {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
 
-- Family: [Figtree](https://fonts.google.com/specimen/Figtree)
-- Weights: 500, 800
+.card__avatar {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card__author-name {
+  font-weight: 700;
+}
